@@ -2,9 +2,6 @@
 FROM        alpine:latest
 MAINTAINER  rkosyk
 
-# Trigger rebuild
-ENV         UPDATED_AT 2016-11-20
-
 # Install Quagga
 RUN         apk --no-cache add quagga supervisor
 
@@ -12,7 +9,7 @@ RUN         apk --no-cache add quagga supervisor
 ADD         supervisord.conf /etc/supervisord.conf
 
 # Configuration files
-VOLUME /etc/quagga
+# VOLUME /etc/quagga
 
 # Expose ports
 # EXPOSE 2601 2604

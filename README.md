@@ -11,7 +11,7 @@ docker build -t quagga .
 
 docker run -d --restart always -v quagga:/etc/quagga --name quagga --privileged --network host quagga
 
-== OR ===============================================================================================
+== OR =======================================================================================
 
 1) Build an image
 
